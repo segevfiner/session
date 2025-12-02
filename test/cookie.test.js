@@ -361,6 +361,7 @@ test('should set session cookie secureAuto', async (t) => {
   t.after(() => { fastify.close() })
 
   const response = await fastify.inject({
+    authority: 'fastify-session.test',
     url: '/'
   })
 
@@ -388,6 +389,7 @@ test('should set session cookie secureAuto change SameSite', async (t) => {
   t.after(() => { fastify.close() })
 
   const response = await fastify.inject({
+    authority: 'fastify-session.test',
     url: '/'
   })
 
