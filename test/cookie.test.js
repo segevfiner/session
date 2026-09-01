@@ -314,6 +314,7 @@ test('should use session cookie secure override when saving secure cookie', asyn
   t.after(() => { fastify.close() })
 
   const response = await fastify.inject({
+    authority: 'fastify-session.test',
     url: '/'
   })
 
